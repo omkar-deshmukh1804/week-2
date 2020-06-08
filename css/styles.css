@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  background-color: lightgrey;
+}
+
+.navbar .navbar-brand h3 {
+  font-weight: bold;
+  font-family: "Ubuntu";
+}
+
+#Sidebar .nav-item .nav-link {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: darkgray;
+  font-family: "Montserrat";
+}
+
+#Sidebar .nav-item .nav-link.active {
+  text-decoration: none;
+  color: #4451ff;
+}
+
+#Sidebar .nav-item .nav-link:hover:not(.active) {
+  text-decoration: none;
+  color: #4451ff;
+}
+
+@media all and (max-width: 600px) {
+  .wrapper {
+    background-color: white;
+  }
+  .topsection .section-heading {
+    background: -webkit-gradient(linear, left top, left bottom, from(#005c97), to(#363795));
+    background: linear-gradient(#005c97, #363795);
+    text-align: center;
+    color: floralwhite;
+    font-family: "Montserrat";
+  }
+  .topsection .user-info .fa-bell {
+    float: left;
+  }
+  .topsection .user-info .custom-user {
+    float: left;
+  }
+  .topsection .user-info .user-btn {
+    float: left;
+  }
+  .topsection .active-clients {
+    text-align: center;
+  }
+  .topsection .sorted {
+    text-align: center;
+  }
+  .topsection .search {
+    text-align: center;
+  }
+  .topsection .search .search-btn {
+    margin-top: 10px;
+  }
+}
+
+.topsection {
+  margin-top: 15px;
+}
+
+.topsection h4 {
+  display: inline-block;
+  padding-top: 3px;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.topsection .user-btn {
+  float: right;
+}
+
+.topsection .user-btn .btn-secondary {
+  background-color: inherit;
+  border: none;
+  color: darkgrey;
+  font-family: "Montserrat";
+}
+
+.topsection .custom-user {
+  color: #4e4e4e;
+  background-color: #dfd7d7ad;
+  padding: 5px 7px 5px 7px;
+  float: right;
+}
+
+.topsection .fa-bell {
+  color: #28a745;
+  background-color: #28a74627;
+  padding: 5px;
+  float: right;
+}
+
+.topsection .active-clients .btn-group .btn-secondary {
+  background-color: inherit;
+  border: none;
+  color: black;
+}
+
+.topsection .active-clients .btn-group .total {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.topsection .sorted {
+  margin-top: 5px;
+}
+
+.topsection .sorted .sort {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.topsection .sorted .btn-secondary {
+  background-color: inherit;
+  border: none;
+  color: black;
+}
+
+.topsection .search .search-bar {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 60%;
+}
+
+.topsection .search .filter .btn-success {
+  border-radius: 0px;
+}
+
+.topsection .search .search-btn {
+  border-radius: 0px;
+}
+
+.topsection .card-col {
+  text-align: center;
+}
+
+.topsection .card-col .card {
+  text-align: center;
+  margin: 0  auto;
+}
+
+.card-col {
+  margin-bottom: 20px;
+}
+
+.card-col .card {
+  height: 15rem;
+  width: 15rem;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.card-col .card .client-img {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+}
+
+.card-col .card .card-body .name {
+  font-family: "Montserrat";
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-col .card .card-body .email {
+  font-family: "Montserrat";
+  text-align: center;
+  font-size: 0.8rem;
+  color: blue;
+  font-weight: 500;
+}
+
+.card-col .card .info-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-col .card .info-button .btn-prof {
+  margin-right: 10px;
+}
+
+.card-col .card .info-button .btn-contact {
+  margin-left: 10px;
+}
+
+.card-col .card .btn-outline-secondary:hover {
+  background-color: white;
+  color: #4451ff;
+  border-color: #4451ff;
+}
+
+.card-col .card:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+          box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+/*# sourceMappingURL=styles.css.map */

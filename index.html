@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link css  -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- google fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;600&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <!-- axios  -->
+    <script src="/node_modules/axios/dist/axios.min.js"></script>
+    <!-- mustache js  -->
+    <script src="/node_modules/mustache/mustache.min.js"></script>
+    
+</head>
+
+
+<body onload="getData()">
+
+    <!-- container fluid  -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <nav class="navbar navbar-light navbar-expand-sm">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Sidebar" aria-expanded="true" aria-controls="Sidebar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-brand">
+                        <h3>datamax</h3>
+                    </div>
+                </nav>
+                    <ul class="nav flex-column" id="Sidebar">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"> <i class=" fa fa-copy"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fa fa-users"></i> My Clients</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"> <i class="fa fa-calendar"></i> Client Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"> <i class="fa fa-vcard"></i> Invite Client</a>   
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"> <i class="fa fa-envelope"></i> Message</a>   
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"> <i class="fa fa-gears"></i> Settings</a>    
+                        </li>
+                    </ul>
+            </div>
+
+            <div class="col-12 col-md-10 topsection">
+                <div class="row">
+                    <div class="col-12 col-md-4 section-heading">
+                        <h4 class="ml-md-4">My Clients</h4>
+                    </div>
+                    <div class="col-12 col-md-8 user-info">
+                        <div class="btn-group user-btn">
+                            <span type="button" class="btn btn-secondary">User Name</span>
+                                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">User Menu-1</a>
+                                <a class="dropdown-item" href="#">Edit</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </div>
+                        </div>
+                        <a class="nav-link" href="#" style="float: right;"><span class="fa fa-user rounded-circle custom-user"></span></a>
+                        <a class="nav-link" href="#" style="float: right;"><span class="fa fa-bell rounded-circle"></span></a>
+                    </div>
+                </div>
+                
+                <div class="wrapper">
+                    <div class="col-md-12 mt-5">
+                        <div class="row">
+                            <div class="col-12 col-md-3 active-clients mt-md-2">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-secondary">Active Clients</button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button><span class="total mt-2">8 Total</span>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Non Active</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-3 sorted  mt-md-2">
+                                <span class="sort">Sorted By</span>
+                                    <button type="button" class="btn btn-secondary btn-sm">Active</button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Non Active</a>
+                                    </div>
+                            </div>
+                            
+                            <div class="col-12 col-md-6 search  mt-md-2">
+                                <div class="search-bar">
+                                    <input class="fa form-control" type="text" placeholder="&#xF002; Search Client" style="font-family:Montserrat, FontAwesome" aria-label="Search">
+                                </div>
+                                    <div class="btn-group filter">
+                                        <button type="button" class="btn btn-success"><span class="fa fa-filter"></span> Filter</button>
+                                        <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">User Menu-1</a>
+                                            <a class="dropdown-item" href="#">Edit</a>
+                                            <a class="dropdown-item" href="#">Settings</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Log Out</a>
+                                        </div>
+                                </div>
+                                    <button class="btn btn-primary search-btn"><i class="fa fa-search"></i> Search</button>
+                            </div>  
+                        </div>  
+                    </div>
+
+                    <div class="col-md-12 mt-5">
+                        <div class="row " id="cards-row" >
+
+                               
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/index.js"></script>
+
+    <script>
+        var viewportWidth  = document.documentElement.clientWidth;
+        var viewportHeight = document.documentElement.clientHeight;
+        $(document).ready(function() {
+            if(viewportWidth <= 1280 && viewportWidth>=768)
+            {
+                $('.filter').children('.btn').addClass('btn-sm')
+                $('.search-btn').addClass('btn-sm')
+            }
+        })
+    </script>
+    
+</body>

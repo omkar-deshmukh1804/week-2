@@ -1,0 +1,62 @@
+{
+  "users":[
+      {
+          "id":1,
+          "firstName" : "Omkar",
+          "lastName" : "Deshmukh",
+          "email": "omideshmukh11@gmail.com",
+          "contact" : "9224416521"
+      },
+
+      {
+          "id":2,
+          "firstName" : "John",
+          "lastName" : "Doe",
+          "email": "jonh@gmail.com",
+          "contact" : "1234567890"
+      },
+
+      {
+          "id":3,
+          "firstName" : "Jane",
+          "lastName" : "Doe",
+          "email": "jane@gmail.com",
+          "contact" : "1234567890"
+      },
+      {
+          "id":4,
+          "firstName" : "Sammy",
+          "lastName" : "Sam",
+          "email": "sam@gmail.com",
+          "contact" : "1234567890"
+      },
+      {
+          "id":5,
+          "firstName" : "Spams",
+          "lastName" : "Eggs",
+          "email": "spams@gmail.com",
+          "contact" : "1234567890"
+      },
+      {
+          "id":6,
+          "firstName" : "Foo",
+          "lastName" : "Bar",
+          "email": "foo@gmail.com",
+          "contact" : "1234567890"
+      },
+      {
+          "id":7,
+          "firstName" : "Will",
+          "lastName" : "White",
+          "email": "will@gmail.com",
+          "contact" : "1234567890"
+      },
+      {
+          "id":8,
+          "firstName" : "Sarah",
+          "lastName" : "Johnson",
+          "email": "sarah@gmail.com",
+          "contact" : "1234567890"
+      }
+  ]
+}

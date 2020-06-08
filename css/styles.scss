@@ -1,0 +1,291 @@
+$fonts:(
+    primary : 'Montserrat',
+    secondary : 'Ubuntu', 
+);
+
+@function font($f){
+    @return map-get($map: $fonts , $key: $f);
+}
+
+body
+{
+    margin : 0;
+    box-sizing: border-box;
+}
+
+.wrapper
+{
+    background-color: lightgrey;
+}
+
+// NAVBAR FLUID 
+
+
+.navbar{
+    .navbar-brand
+    {
+        h3
+        {
+            font-weight: bold;
+            font-family: font(secondary);
+        }
+    }
+    
+}
+
+//  *** SIDE BAR 
+
+#Sidebar
+    {
+        .nav-item
+        {
+            .nav-link
+            {
+                display: block;
+                padding: 16px;
+                text-decoration: none;
+                color: darkgray;
+                font-family: font(primary);
+
+            }
+            .nav-link.active
+            {
+                text-decoration: none;
+                color: rgb(68, 81, 255);
+            }
+            .nav-link:hover:not(.active)
+            {
+                text-decoration: none;
+                color: rgb(68, 81, 255);
+            }
+
+        }
+    }
+
+//My clients TOP section
+
+@media all and (max-width: 600px)
+{
+    .wrapper
+    {
+        background-color: white;
+    }
+    
+    .topsection
+    {
+        .section-heading
+        {
+            background: linear-gradient(#005c97, #363795);
+            text-align: center;
+            color: floralwhite;
+            font-family: font(primary);
+
+        }
+        .user-info
+        {
+            .fa-bell{
+                float: left;
+
+            }
+            .custom-user
+            {
+                float: left;
+            }
+            .user-btn
+            {
+                float: left;
+               
+                
+            }
+            
+        }
+
+        .active-clients
+        {
+            text-align: center;
+        }
+        .sorted{
+            text-align: center;
+        }
+        .search
+        {
+            text-align: center;
+            .search-btn
+            {
+                margin-top:10px;
+            }
+        }
+    }
+}
+
+
+.topsection
+{
+    margin-top: 15px;
+    h4
+    {
+        display: inline-block;
+        padding-top: 3px;
+        font-family: font(primary);
+        font-weight: bold;
+    }
+    .user-btn
+    {
+        float: right;
+        .btn-secondary
+        {
+            background-color: inherit;
+            border: none;
+            color:darkgrey;
+            font-family: font(primary);
+
+        }
+    }
+    .custom-user
+        {
+            color:#4e4e4e;
+            background-color: #dfd7d7ad;
+            padding: 5px 7px 5px 7px;
+            float:right;
+
+        } 
+       
+    .fa-bell
+        {
+           
+            color:#28a745;
+            background-color: #28a74627;
+            padding: 5px;
+            float: right;
+        }
+    
+    .active-clients
+    {
+        .btn-group
+        {
+            .btn-secondary
+            {
+                background-color: inherit;
+                border: none;
+                color:black;
+            }
+            .total
+            {
+                color:grey;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .sorted
+    {
+        margin-top: 5px;
+        .sort
+        {
+            color:grey;
+            font-size: 0.8rem;
+        }
+        .btn-secondary
+        {
+            background-color: inherit;
+            border: none;
+            color:black;
+        }
+    }
+
+    .search
+    {
+        .search-bar{
+            display: inline-flex;
+            width: 60%;
+        }
+
+        .filter
+        {
+            .btn-success
+            {
+            border-radius: 0px;
+
+            }
+        }
+        .search-btn
+        {
+            border-radius: 0px;
+        }
+    }
+    .card-col
+    {
+        text-align: center;
+
+        .card
+        {
+            text-align: center;
+            margin:0  auto;
+        }
+    }
+}
+
+//CARD SECTION
+
+.card-col
+{
+    margin-bottom: 20px;;
+    .card
+{
+    height:15rem;
+    width: 15rem;
+    transition : box-shadow 0.2s;
+   
+    .client-img
+    {
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        margin: 20px auto;
+    }
+    .card-body
+            {
+                .name{
+                    font-family: font(primary);
+                    text-align: center;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+                .email{
+                    font-family: font(primary);
+                    text-align: center;
+                    font-size: 0.8rem;
+                    color: blue;
+                    font-weight: 500;
+   
+                }
+            }
+    
+            .info-button
+            {
+                text-align: center;
+                margin-top: 20px;
+                .btn-prof{
+                    margin-right: 10px;
+                }
+                .btn-contact{
+                    margin-left: 10px;
+                }
+            }
+            .btn-outline-secondary:hover{
+                background-color: white;
+                color: rgb(68, 81, 255);
+                border-color: rgb(68, 81, 255) ;
+                
+            }
+}
+.card:hover{
+    transform : scale(1.15);
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2 );
+}
+}
+
+
+
+
+
