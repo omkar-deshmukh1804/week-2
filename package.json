@@ -10,7 +10,7 @@
   "author": "omkar",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "font-awesome": "^4.7.0",
     "get-google-fonts": "^1.2.2",
